@@ -77,6 +77,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{csquotes}
 \usepackage{array}
+\usepackage {adjustbox}
 \usepackage{tcolorbox}
 \usepackage{graphicx}
 \usepackage{multirow}
@@ -371,7 +372,7 @@
 %\title{On the Impact of Security Questions on Answers}
 %\title{``secret question meter": A visual interface design nudges users towards stronger answers in security questions}
 \title{%
- Privacy Engineering? Why? }
+xxxxx }
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
@@ -448,18 +449,78 @@
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}
-Use of software applications in daily lives of users is growing \cite {federal2007fair}. With the pervasiveness of technology users today disclose a huge amount of personal information, such as their address, credit card and banking details and even their health conditions, into online applications. When users disclose more data into software applications, the ways through which user privacy could be compromised through these software systems increase. For example, if a user disclose his/her location through his mobile phone to an untrusted application continuously, it becomes easy for a stranger to predict the location of that user on a given time on a given day. Therefore, the concerns for user privacy in software systems have become indespensable . 
+Users disclose their personal data into numerous software systems, such as web sites, mobile applications and even into payment systems when they tap their bank card every time they shop \cite {federal2007fair}. With the pervasiveness of technology users today disclose a huge amount of personal information, such as their address, credit card and banking details and even their health conditions, into online applications. When users disclose more data into software applications, the ways through which user privacy could be compromised through these software systems increase. 
 
-In order to enable users to protect their privacy within commonly used software systems (mobile applications, social networking platforms) it is important to understand how users make their decisions when they disclose their personal information into these software systems. When disclosing their personal information into software systems users are faced with many conditions. For example, how important is this information for this particular system? How sensitive is this particular information is to me? How visibile would this information be once I disclose them?. However, how these conditions relate to each other, and how users perceive these conditions and the impact of these conditions are not readily observable. This not only makes users uncomfortable when interacting with software systems, but also makes it difficult for privacy researchers and software developers to make data collection decisions when designing  software systems. 
+Disclosure of personal details always comes with an associated privacy risk that concerns users. Users are known to be reluctant to disclose data into software systems they cannot trust, because using data for reasons unforeseen by users and loss of data to third parties unknown to the user could result in privacy vulnerabilities. Because of this, privacy conscious users face many problems when they make decisions to disclose their information into software systems such as : How sensitive is this data for me? Who can view this data in this application? For what purposes will this data be used? However the apparent effect these concerns have on the disclosure decisions of the user is not directly observable. Lack of understanding about the aspects that concern users when they disclose data not only makes users uncomfortable when interacting with software systems, but also makes it difficult for privacy researchers and software developers to make data collection decisions when designing  software systems. 
 
 In order to ensure user privacy preferences are met, developers need to be able to measure and quantify privacy of certain data items are for users. For such a measurement to be done, first one needs to identify the factors that affect privacy of data items for a user and the relationship among these factors. For example, would users be more comfortable sharing their credit card number with their banking application than their social networking account? Would users be equally comfortable sharing their blood group with their banking application? Would users be more comfortable sharing their age than their birthdate with their social networking account? Answering these questions are difficult yet important. A privacy risk metric that could determine the privacy of different data items in a given setting would be beneficial for users, software developers and also privacy researchers. From a user perspective, knowing how private their data are would help them to decide whether or not to disclose certain data items into software systems. From a developer's perspective they could decide which data to collect and which data to avoid when designing software systems in order to protect user privacy within the systems. For privacy researchers this information could be used when making measurements on user privacy among different software systems and provide guidance for law makers and authorities to enforce data protection regulations.
 
-In this work, we attempt to determine a privacy measurement for data elements using three parameters, sensitivity of the data element to the user, visibility of the data element within the software system once disclosed and the relatedness of the data element to the software system. We observe how these three parameters affect data dicslosure decisions of users when they interact with software systems through a user survey. We conducted an online study with 151 participants. We incorporate the relationship among the three parameters above to determine a metric to measure the privacy associated with different data items in a given context of a software system. For example, what is the privacy risk component associated with disclosing the age of a user into a social networking application? 
+In this research we attempt to extract how users perceive different aspects of data that leads to their decisions in disclosing their data into software systems. Using a survey with 151 respondents we observe how users perceive the sensitivity of the data items to the user, relatedness of the data items to the purpose of an application and the visibility a particular data item gets in an application when they decide to disclose their data into software systems. With this knowledge we attempt to build a relationship relating how sensitivity, visibility and relatedness of data items relate to user privacy. We measure perceived privacy risk when users disclose their data items in different settings. Furthermore, through a qualitative analysis we attempt to identify other factors, if any, that could affect users data disclosure decisions.
 
-The contribution of this paper is determining how visibility, relatedness and sensitivity of data elements affect the discluse decisions of users when they interact with software systems. The paper is structured as follows. We first discuss prevoius work that has identified the parameters (sensitivity, visibility and relatedness) in measuring privacy in the background section. Then we describe our user study followed by the results. Next, we discuss the implicatins of our findings followed by the conclusion and future work.
+This paper has two contributions.
+
+\begin{itemize}
+\item  First, measure privacy of data disclosure decisions. A metric to measure privacy that takes into account the context in which it is disclosed (by considering the relatedness of the data item to the application context) would help software developers to make decisions about collecting, storing and using different data items in software systems. 
+\item Second, understanding factors that affect users' data disclosure decisions. Understanding factors that affect users' decisions to disclose their data into software systems would help organizations to build positive relationships with users when they collect user data for different services and business purposes. 
+\end{itemize}
+
+The paper is structured as follows. We first discuss prevoius work that has identified the parameters (sensitivity, visibility and relatedness) in measuring privacy in the background section. Then we describe our user study followed by the results. Next, we discuss the implicatins of our findings followed by the conclusion and future work.
+
+
+\section {Research Methodology}
+
+Our goal in this research is to understand how sensitivity, visibility and relatedness affect users' decision making when they disclose their personal data into software systems. For this, we conducted an online survey with 133 users. We designed the survey with 4 simple questions with Likert scales, to understand how users would feel if they are to disclose their personal data into different types of software applications. We used a list of 10 data items and asked users how they would feel disclosing those data items in four different application contexts. We used a five point Likert scale with values, very uncomfortable, somewhat uncomfortable, neutral, somewhat comfortable and very comfortable for users to express their feelings. Following these four questions we also used an open ended question to identify any factors other than what we investigated in the survey, that could affect users data disclosure decisions when they interact with software systems. At the end of the survey, we included questions to extract the demographics of the participants. However, we included an option \textit{prefer not to say} in all these questions, so that users could avoid disclosing their age, gender and educational background.
+
+The survey design was evaluated with two participants. We fine tuned the wording of the questionnaire with the feedback of these two participants. Then the survey was distributed using social media platforms (Facebook, LinkedIn and Twitter) and personal connections of the authors. Before proceeding to the survey participants were given a brief introduction about the survey and the duration of the survey (under 10 minutes, calculated using the participants who evaluated the questionnaire). We also provided the participants with the contact details of the researchers. The research methodology (survey design, participant recruitment and results collection) was approved by the university ethic committee responsible for ethical conduction of studies that involve human subjects.
+
+We measured the participant adequacy while collecting data and stopped data collection once we reached sample adequacy at KMO = 0.9. We then analyzed the data to obtain results.
+
+\subsection {Data Analysis}
+
+We assigned values from 1 to 5 for the answers we received on the Likert scale as follows.
+
+\begin{center}
+\begin{table}[htbp]
+\caption{Assigning values to Likert Scale preferences}
+\begin{center}
+\begin{adjustbox}{width=0.5\textwidth}
+\begin{tabular}{|p{0.75\linewidth}|p{0.25\linewidth}|}
+\hline
+Likert Scale Preference & Value Assigned \\
+\hline
+Very Comfortable & 1\\
+\hline
+Somewhat Comfortable& 2 \\
+\hline
+Neutral & 3  \\
+\hline
+Somewhat Uncomfortable & 4 \\
+\hline
+Very Uncomfortable & 5 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{center}
+\end{table}
+\end{center}
+
+Then with the assigned values we calculated a mean value that would measure users ease of disclosure of each data item in the contexts we defined. We also evaluated how users felt about disclosing different data items in the same context using Two way ANOVA with repetition. We considered the sensitivity of data items, and the relatedness of the data items for the particular context we defined when deriving these results. For example, if a user feels comfortable disclosing their blood type into a health related application that could imply that the user is comfortable because that particular data item is related to the functionality that application provides. However, at the same time the user might feel uncomfortable disclosing their previous medicines taken to the same application because they perceive it to be highly sensitive. We discuss these aspects in detail when we present our results
+
+For the qualitative analysis of the descriptive answers we received for the open ended question we made use of the process of coding. One coder initially generated a self coding scheme by summarizing the answers we received. Then we used another coder to do the same for the data set. Both coding schemes were similar and interchangeable and hence the first coder then coded all answers using the initial coding scheme in Nvivo. We then relate these codes into themes and identify factors that concern users when they disclose their personal data into different software systems.
+
+\section {Results}
+
+We tested the validity of our results with Cronbach's alpha (0.91) and the participant adequacy for correlations with KMO (KMO = 0.82). 
+
+\section{Discussion}
+
+\section {Limitations}
+
+The study had several limitations. Firstly this was a remote survey. While remote surveys are beneficial in getting a large sample of participants in a relatively small period of time, direct engagement with users would disclose more in depth information when it comes to qualitative analysis. However, the main contribution of the paper was the derivation of the privacy measurement formula. Furthermore, for the qualitative component of data analysis we reached data saturation with the codes with 17 participants. The survey had 133 respondents which makes the results valid. Contextual studies involving real time applications that directly engage users in a natural setting could be used to observe how our findings stand in such setups.
 
 
 
+\section{Conclusion and Future Work}
 
 
 
