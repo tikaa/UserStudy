@@ -83,6 +83,7 @@
 \usepackage{multirow}
 \usepackage{multicol}
 \usepackage{pdflscape}
+\usepackage{amsmath}
 \usepackage{float}
 \usepackage{afterpage}
 \graphicspath{ {images/} }
@@ -504,9 +505,59 @@ Very Uncomfortable & 5 \\
 \end{table}
 \end{center}
 
-Then with the assigned values we calculated a mean value that would measure users ease of disclosure of each data item in the contexts we defined. We also evaluated how users felt about disclosing different data items in the same context using Two way ANOVA with repetition. We considered the sensitivity of data items, and the relatedness of the data items for the particular context we defined when deriving these results. For example, if a user feels comfortable disclosing their blood type into a health related application that could imply that the user is comfortable because that particular data item is related to the functionality that application provides. However, at the same time the user might feel uncomfortable disclosing their previous medicines taken to the same application because they perceive it to be highly sensitive. We discuss these aspects in detail when we present our results
+The goal of our research was to calculate the relationship between sensitivity, relatedness and visbility of data when users make their disclosure decisions. The data we collected in the study was the feeling of disclosure of data by participants in different scenarios. From this we first calculate the
+\begin{itemize}
+\item Feeling for sensitivity -  $F_S$, 
+\item Feeling of visibility - $F_V$ and the 
+\item Feeling of relatedness -  $F_R$
+\end{itemize}
+for each participant when they discose data into software applications. This calculation was done as follows.
+ \begin{equation} \label{eq1}
+\begin{split} 
+\text{Feeling of Sensitivity}(F_{S}) & = \\ \frac{\text{\text{Sharing a sensitive data item in an application}}}{\text{Sharing a not so sensitive data item in the same application}} 
+\end{split}
+\end{equation}
 
-For the qualitative analysis of the descriptive answers we received for the open ended question we made use of the process of coding. One coder initially generated a self coding scheme by summarizing the answers we received. Then we used another coder to do the same for the data set. Both coding schemes were similar and interchangeable and hence the first coder then coded all answers using the initial coding scheme in Nvivo. We then relate these codes into themes and identify factors that concern users when they disclose their personal data into different software systems.
+We defined sensitive elements following the European Data Protection Regulation's definition for the data analysis. According to their definition we identified, user's credit card details, user's health information (subscribed medicine, blood type) as sensitive data and user's name as a not so sensitive data item. 
+
+Similarly, 
+
+ \begin{equation} \label{eq2}
+\begin{split}
+\text{Feeling of Visibility}(F_{V})  & = \\ \frac{\text{Sharing a data item in an application where the user cannot control the visibility of the data item}}{\text{sharing the same data item in an application where the user can control the visibility}} 
+\end{split}
+\end{equation}
+
+
+
+\begin{equation} \label{eq3}
+\begin{split}
+\text{Feeling of Relatedness}(F_{R}) & = \\ \frac{\text{Sharing a related data item into an application}}{\text{sharing an unrelated data item in the same application}} 
+\end{split}
+\end{equation}
+
+
+Then we obtain the average values for $F_S$, $F_V$ and $F_R$ across all participants to get the average feeling. Using the average values for the feelings we calculate the relationship between the parameters as follows,
+ \begin{equation} \label{eq1}
+\begin{split}
+Sensitivity\_vs\_Relatedness & = \\ \frac{\text{Feeling of Sensitivity}(F_{S})}{\text{Feeling of Relatedness}(F_{R})} 
+\end{split}
+\end{equation}
+
+ \begin{equation} \label{eq1}
+\begin{split}
+Sensitivity\_vs\_Visibility & = \\ \frac{\text{Feeling of Sensitivity}(F_{S})}{\text{Feeling of Visibility}(F_{V}) } 
+\end{split}
+\end{equation}
+
+ \begin{equation} \label{eq1}
+\begin{split}
+Visibility\_a\_Relatedness & = \\ \frac{\text{Feeling of Visibility}(F_{V}) }{\text{Feeling of Relatedness}(F_{R})} 
+\end{split}
+\end{equation}
+
+
+
 
 \section {Results}
 
