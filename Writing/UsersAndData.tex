@@ -468,16 +468,20 @@ The paper is structured as follows. We first discuss previous work that has iden
 
 \section {Related work}
 
-Most research that focus on user disclosure decisions have the motivation to increase user data disclosure. Research with the motivation to increase user data disclosure focus on helping users to make their disclosure decisions when using software systems, such as mobile applications. For example, it is said that users are more likely to decide to disclose data when they are shown the decisions made by other users \cite {besmer2010impact} or their friends \cite {dennett2000little}. Furthermore, it has been found that changing the order of intrusiveness of the data being requested also makes users disclose more data when interacting with software systems \cite {acquisti2012impact}. However, these are extrinsic factors that could affect disclosure decisions of users. Knijnenburg and Kobsa \cite {knijnenburg2013helping} tested the effect of the justification provided by the system when requesting data on the disclosure decisions made by users. They revealed that when users are said \textit{this data is useful for you} users are more likely to disclose the data item with the application. However, in a follow-up research they have stated that disclosure justification messages do not increase disclosure, but rather decrease user's trust with the organization that developed the software system \cite {knijnenburg2013making}. This finding is particularly counterintuitive and hence demonstrate the complexity that is involved with user disclosure decisions on their personal information when using software system. Interestingly all these research focus on system behaviors (privacy seals, justification for data collection) and user's personal preferences such as their experience with a system and the expectation from a system. The effect of the actual data items that are being collected and the nature of those data on the user disclosure decisions have not yet been investigated.
+Most research that focus on user disclosure decisions have the motivation to increase user data disclosure. These research focus on what makes users disclose more data rather than understanding how users disclose data. For example, Besmer et al. said that users are more likely to decide to disclose data when they are shown the decisions made by other users \cite {besmer2010impact} Similarly, Dennett has said that users feel comfortable sharing their data when they are shown the decisions made by their friends. \cite {dennett2000little}. Furthermore, Acquisti et al. found that changing the order of intrusiveness of the data being requested also makes users disclose more data when interacting with software systems \cite {acquisti2012impact}. Similarly, testing the effect of the justification provided by the system when requesting data Knijnenburg and Kobsa \cite {knijnenburg2013helping} revealed that when users are told \textit{this data is useful for you} users are more likely to disclose data with the application. Interestingly, all these research focus on system behaviors (way of requesting data, justification for data collection) and user's personal preferences ( users' experience with a system, users' expectation from a system) and their effects on user data disclosure decisions.
 
-It has been found that user privacy is affected by the sensitivity of the data they disclose and also the visibility the data gets in a particular application. Therefore, data protection regulations have explicit conditions for the collection and use of sensitive user data in systems and also making collected data visible (sharing data with third parties) in a system. Measuring user privacy considering the sensitivity and visibility of data in an application has been attempted before. Maximillien et al. has shown that a metric for privacy in a given context can be obtained by multiplying the measurement for sensitivity with the measurement for visibility. Using this metric Minkus and Memon \cite{minkus2014scale} have attempted to measure user privacy through their Facebook privacy settings. However, these are contextual measurements. The context in which data is being disclosed \cite {nissenbaum2009privacy, john2010strangers} is also known to have an effect on user disclosure decisions. For example, it is said that users have an undermining effect on rewards when the requested data appears irrelevant for a system \cite {li2010understanding}. Therefore, a holistic measurement for privacy needs to consider all these factors when measuring user privacy from the data disclosure decisions. 
+Taking a different approach to data disclosure, it been found that user data disclosure decisions are affected by the sensitivity of the data they disclose and also the visibility the data gets in a particular application \cite {maximilien2009privacy}. Developing on this understanding Maximillien et al. \cite {maximilien2009privacy} have shown that a metric for privacy in a given context can be obtained by multiplying the measurement for sensitivity of a data item with the measurement for visibility the data item gets in an application. They define their metric for privacy as \enquote{a measurement that determines their [the user's ]willingness to disclose information associated with this item} \cite {maximilien2009privacy}. Using the same metric, Minkus and Memon \cite{minkus2014scale} have attempted to measure user privacy from their Facebook privacy settings. They have shown that the metric could be used to measure the privateness of a user from the choices s/he makes when setting up the privacy settings in Facebook. However, this is a contextual measurements. The context in which data is being disclosed \cite {nissenbaum2009privacy, john2010strangers} is also known to have an effect on user disclosure decisions \cite {knijnenburg2013making}. For example, it is said that users have an undermining effect on rewards for data disclosure when the requested data appears irrelevant for a system \cite {li2010understanding}, whereas they accepted the rewards if the data is relevant for the system. Therefore, a holistic measurement for privacy needs to consider all these factors when measuring user privacy from the data disclosure decisions. 
 
-We focus on investigating the effect of sensitivity and relevance of the data for an application and the visibility the data gets in the application to user disclosure decisions. With this we also focus on providing a privacy metric in order to communicate this effect to software developers and privacy researchers, to understand and incorporate user disclosure decisions into the software system designs. The goal of our research is to communicate these factors in a meaningful way for software developers to assist the development of privacy preserving software systems
+We focus on investigating the effect of sensitivity, the relevance of the data for an application and the visibility the data gets in the application to user disclosure decisions. With this we also focus on providing a privacy metric in order to communicate this effect to software developers and privacy researchers, to understand and incorporate user disclosure decisions into the software system designs. The goal of our research is to communicate these factors in a meaningful way for software developers to assist the development of privacy preserving software systems
 
 
 \section {Research Methodology}
 
-Our goal in this research is to understand how sensitivity, visibility and relatedness affect users' decision making when they disclose their personal data into software systems. For this, we conducted an online survey with 151 users. We designed the survey with 4 simple questions with Likert scales. We used a list of 10 data items and asked users how they would feel disclosing those data items in four different application contexts. We used a five point Likert scale with values, very uncomfortable, somewhat uncomfortable, neutral, somewhat comfortable and very comfortable for users to express their feelings. Following these four questions we also used an open ended question to identify any factors other than what we explicitly investigated in the survey, that could affect users data disclosure decisions when they interact with software systems. At the end of the survey, we included questions to extract the demographics of the participants. However, we included an option \textit{prefer not to say} in all these questions, so that users could avoid disclosing their age, gender and educational background.
+Our goal in this research is to understand how sensitivity, visibility and relatedness affect users' decision making when they disclose their personal data into software systems. For this, we conducted an online survey with 151 users. We designed the survey with 4 simple questions with Likert scales. We used a list of 10 data items and asked users how they would feel disclosing those data items in four different application contexts. We define this as the \textit{feeling of disclosure} $F_d$. We used a five point Likert scale with values, very uncomfortable, somewhat uncomfortable, neutral, somewhat comfortable and very comfortable for users to express their feelings. We consider $F_d$ to be a fucntion of sensitivity ($D_s$) and visibility ($D_v$) of the data item and the relatedness of the data item to the context of the software system ($D_r$). Our goal is to determine how $D_s$, $D_v$ and $D_r$ affect $F_d$.
+
+Following these four questions we also included an open ended question in the questionnaire to identify any factors other than what we explicitly investigated in the survey, that could affect users data disclosure decisions when they interact with software systems. 
+
+At the end of the survey, we included questions to extract the demographics of the participants. However, we included an option \textit{prefer not to say} in all these questions, so that users could avoid disclosing their age, gender and educational background.
 
 The survey design was evaluated with two participants (graduate students in the university not connected to the research). We fine tuned the wording of the questionnaire with the feedback of these two participants. Then the survey was distributed using social media platforms (Facebook, LinkedIn and Twitter) and personal connections of the authors. Before proceeding to the survey, participants were given a brief introduction about the survey and the duration of the survey (under 10 minutes, calculated using the participants who evaluated the questionnaire). We also provided the participants with the contact details of the researchers. The research methodology (survey design, participant recruitment and results collection) was approved by the university ethic committee responsible for ethical conduction of studies that involve human subjects.
 
@@ -514,13 +518,13 @@ Very Uncomfortable & 5 \\
 
 The goal of our research was to calculate the relationship between sensitivity, relatedness and visbility of data when users make their disclosure decisions. The data we collected in the study was the feeling of disclosure of data by participants in different scenarios. From this we first calculate the
 \begin{itemize}
-\item Feeling for sensitivity -  $F_S$, 
-\item Feeling of visibility - $F_V$ and the 
-\item Feeling of relatedness -  $F_R$
+\item Effect of data sensitivity to the feeling of disclosure -  $F_d,D_s$, 
+\item Effect of data visibility to the feeling of disclosure -  $F_d,D_v$, 
+\item Effect of data relatedness to the feeling of disclosure -  $F_d,D_r$, 
 \end{itemize}
 for each participant when they discose data into software applications. This calculation was done as follows.
 
-\[ \begin{aligned} \text{Feeling of } \\ \text{Sensitivity}(F_{S}) \end{aligned} =
+\[ \begin{aligned} \text{Effect of } \\ \text{Sensitivity}(F_{d}, D_{s}) \end{aligned} =
 \frac{\begin{aligned}
       \text{Sharing a sensitive data item } \\ \text{ in an application}
       \end{aligned}}%
@@ -533,7 +537,7 @@ We defined sensitive elements following the European Data Protection Regulation'
 
 Similarly, 
 
-\[ \begin{aligned} \text{Feeling of } \\ \text{Visibility}(F_{V}) \end{aligned} =
+\[ \begin{aligned} \text{Effect of } \\ \text{Visibility}\\ (F_{d},D_{v}) \end{aligned} =
 \frac{\begin{aligned}
       \text{Sharing a data item in an application where } \\ \text{ the user cannot control the visibility} \\ \text{of the data item}
       \end{aligned}}%
@@ -544,7 +548,7 @@ Similarly,
 
 
 
-\[ \begin{aligned} \text{Feeling of } \\ \text{Relatedness}(F_{R})\end{aligned} =
+\[ \begin{aligned} \text{Effect of } \\ \text{Relatedness}(F_{d},D_{r})\end{aligned} =
 \frac{\begin{aligned}
       \text{Sharing a related data item} \\ \text{  with an application}
       \end{aligned}}%
@@ -556,19 +560,19 @@ Similarly,
 Then we obtain the average values for $F_S$, $F_V$ and $F_R$ across all participants to get the average feeling. We represnet these by $F_S(av)$, $F_V(av)$ and $F_R(av)$ Using the average values for the feelings we calculate the relationship between the parameters as follows,
  \begin{equation} \label{eq1}
 \begin{split}
-Sensitivity\_vs\_Relatedness & = \\ \frac{\text{Average Feeling of Sensitivity}(F_{S(av)})}{\text{Average Feeling of Relatedness}(F_{R(av)})} 
+Sensitivity\_vs\_Relatedness & = \\ \frac{\text{Average Effect of Sensitivity}(F_{d},D_{s}(av)) }{\text{Average Effect of Relatedness}(F_{d},D_{r}(av))} 
 \end{split}
 \end{equation}
 
  \begin{equation} \label{eq1}
 \begin{split}
-Sensitivity\_vs\_Visibility & = \\ \frac{\text{Average Feeling of Sensitivity}(F_{S(av)})}{\text{Average Feeling of Visibility}(F_{V(av)}) } 
+Sensitivity\_vs\_Visibility & = \\ \frac{\text{Average Effect of Sensitivity}(F_{d},D_{s}(av))}{\text{Average Effect of Visibility}(F_{d},D_{v}(av)) } 
 \end{split}
 \end{equation}
 
  \begin{equation} \label{eq1}
 \begin{split}
-Visibility\_a\_Relatedness & = \\ \frac{\text{Average Feeling of Visibility}(F_{V(av)}) }{\text{Average Feeling of Relatedness}(F_{R(av)})} 
+Visibility\_a\_Relatedness & = \\ \frac{\text{Average Effect of Visibility}(F_{d},D_{v}(av)) }{\text{Average Effect of Relatedness}(F_{d},D_{r}(av))} 
 \end{split}
 \end{equation}
 
