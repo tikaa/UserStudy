@@ -479,7 +479,67 @@ Particularly focusing on privacy risk, Maximilien et al. \cite {maximilien2009pr
 We focus on investigating the effect of data sensitivity, the relevance of the data for an application and the visibility the data gets in the application on user disclosure decisions. With this we focus on obtaining a privacy risk metric in order to communicate the effect of data sensitivity, visibility and the relatedness of data for a particular application on user disclosure decisions to software developers and privacy researchers. This metric would help software developers to understand and incorporate perceived privacy risk of users into the software system designs and assist the development of privacy preserving software systems. For example, developers could identify which data users are most concerned about and which data users would feel most uncomfortable sharing. This knowledge could help them implement better security for data in system designs and communicate it to the user in order to make users comfortable sharing data with the system.
 
 
-\section {Research Methodology}
+\section {Methodology}
+
+In this section we first introduce the parameters we are measuring in tthis research. We will introduce the notations we use and the measurements we are interested in. Then in the research study section we discuss the user study we conducted and the approach we used t evaluate the measurements.
+
+\subsection {Notations}
+
+The goal of our research was to calculate the relationship between sensitivity (S), relatedness (R) and visibility (V) of data on the feeling of discomfort when users make the disclosure decisions. That is, we want to know if users are more concerned about the data sensitivity when they disclose data compared to the relatedness of those data to the system they are interacting with. For example, would a user feel the same reluctance to disclose their prescribed medicine to a social networking app compared to a health app?
+
+We use the following notations to define the,
+
+\begin{itemize}
+\item Effect of data sensitivity to the feeling of disclosure -  $F_d,D_s$, 
+\item Effect of data visibility to the feeling of disclosure -  $F_d,D_v$, 
+\item Effect of data relatedness to the feeling of disclosure -  $F_d,D_r$, 
+\end{itemize}
+
+Then, we argue that we obtain the difference in the feeling of discomfort in data disclosure when disclosing a sensitive data item against a not so sensitive data item ( $\Delta$ $F_s$) in the same application context as,
+
+$\Delta$ $F_s$ = Feeling of discomfort in sharing a sensitive data item - Feeling of discomfort in sharing a not so sensitive data item in the same application.
+
+Since all other parameters (R and V) in the two scenarios are kept the same, the difference in the feeling of discomfort in disclosure in this instance is only affected by the sensitivity of the data item being disclosed.
+
+Then we take this as a percentage value to obtain the effect of sensitivity to the feeling of discomfort in disclosure. Therefore given the sensitivity positively affects the feeling of discomfort, the equation takes values [1,0] or else, if the sensitivity affected discomfort negatively, the equation would take values [0, -1]The final calculation we obtain hence, is as follows.
+
+
+$F_d,D_s$ =  $\Delta$ $F_s$ \% 
+
+
+Similarly, we calculated $F_d,D_v$ and $F_d,D_r$,
+
+\[ \begin{aligned} \text{Effect of Visibility} (F_{d},D_{v}) \end{aligned} =
+\frac{\Delta F_{v}}%
+ {5}
+\]
+
+\[ \begin{aligned} \text{Effect of Relatedness} (F_{d},D_{r})\end{aligned} =
+\frac{\Delta F_{r}}%
+ {5}
+\]
+
+Then we obtain the average values for $F_d,D_s$ , $F_d,D_v$ and $F_d,D_r$ across all participants (N = 151) to get the average feeling. We represent these by $F_d,D_s$(av) , $F_d,D_v$(av) and $F_d,D_r$(av). Using the average values, we calculate the relationship between the parameters as follows,
+ \begin{equation} \label{eq1}
+\begin{split}
+Sensitivity\_vs\_Relatedness & = \\ \frac{\text{Average Effect of Sensitivity}(F_{d},D_{s}(av)) }{\text{Average Effect of Relatedness}(F_{d},D_{r}(av))} 
+\end{split}
+\end{equation}
+
+ \begin{equation} \label{eq1}
+\begin{split}
+Sensitivity\_vs\_Visibility & = \\ \frac{\text{Average Effect of Sensitivity}(F_{d},D_{s}(av))}{\text{Average Effect of Visibility}(F_{d},D_{v}(av)) } 
+\end{split}
+\end{equation}
+
+ \begin{equation} \label{eq1}
+\begin{split}
+Visibility\_vs\_Relatedness & = \\ \frac{\text{Average Effect of Visibility}(F_{d},D_{v}(av)) }{\text{Average Effect of Relatedness}(F_{d},D_{r}(av))} 
+\end{split}
+\end{equation}
+
+
+\subsection {Research Study}
 
 Our goal in this research is to understand how sensitivity, visibility and relatedness affect associated privacy risk of a data item. Going along with Maximilien et al. \cite {maximilien2009privacy} we define privacy risk to be \enquote{a measurement that determines the user's feeling of discomfort in disclosing information associated with this item}. We conduct a user survey to understand user decision making when they disclose their personal data into software systems. For this, we conducted an online survey with 151 users. We designed the survey with 4 simple questions with Likert scales. We used a list of 10 data items and four different mobile application contexts in the questionnaire. The application contexts we defined were,
 
@@ -589,60 +649,7 @@ Very Uncomfortable & 5 \\
 \end{table}
 \end{center}
 
-The goal of our research was to calculate the relationship between sensitivity, relatedness and visibility of data on the feeling of discomfort when users make the disclosure decisions. The data we collected in the study was the feeling of disclosure of data by participants in different scenarios. From this we first calculate the
-\begin{itemize}
-\item Effect of data sensitivity to the feeling of disclosure -  $F_d,D_s$, 
-\item Effect of data visibility to the feeling of disclosure -  $F_d,D_v$, 
-\item Effect of data relatedness to the feeling of disclosure -  $F_d,D_r$, 
-\end{itemize}
 
-In order to calculate the effect for each participant when they disclose data into software applications we use the following calculation. We use the use case of calculating  $F_d,D_s$ in this explanation.
-
-First we argue that we obtain the difference in the feeling of discomfort in data disclosure when disclosing a sensitive data item against a not so sensitive data item ( $\Delta$ $F_s$) in the same application context as,
-
-$\Delta$ $F_s$ = Feeling of discomfort in sharing a sensitive data item - Feeling of discomfort in sharing a not so sensitive data item in the same application.
-
-Since all other parameters in the two scenarios are kept the same, the difference in the feeling of discomfort in disclosure in this instance is only affected by the sensitivity of the data item being disclosed. Then we argue that the effect of this difference is obtained when we measure this against the maximum level of discomfort of disclosure. For example, if a particular user had an x level of discomfort when disclosing a not so sensitive data item, the increase of feeling of disclosure against due to data sensitivity against the maximum level of discomfort gives us the effect of the feeling of data sensitivity on the feeling of disclosure. Therefore given the sensitivity positively affects the feeling of discomfort, the equation takes values [1,0] or else, if the sensitivity affected discomfort negatively, the equation would take values [0, -1]The final calculation we obtain hence, is as follows.
-
-
-\[ \begin{aligned} \text{Effect of Sensitivity} (F_{d}, D_{s}) \end{aligned} =
-\frac{\Delta F_{s}}%
- {5}
-\]
-
-
-We categorized data into sensitive data and not so sensitive data based on the definitions in the USA FTC \cite {usa2016data} and the Australian Privacy Act \cite {australian2014data} for this calculation. According to their definition we identified, user's credit card details, user's health information (subscribed medicine, blood type) as sensitive data and user's age as a not so sensitive data item. 
-
-Similarly, we calculated $F_d,D_v$ and $F_d,D_r$,
-
-\[ \begin{aligned} \text{Effect of Visibility} (F_{d},D_{v}) \end{aligned} =
-\frac{\Delta F_{v}}%
- {5}
-\]
-
-\[ \begin{aligned} \text{Effect of Relatedness} (F_{d},D_{r})\end{aligned} =
-\frac{\Delta F_{r}}%
- {5}
-\]
-
-Then we obtain the average values for $F_d,D_s$ , $F_d,D_v$ and $F_d,D_r$ across all participants (N = 151) to get the average feeling. We represent these by $F_d,D_s$(av) , $F_d,D_v$(av) and $F_d,D_r$(av). Using the average values, we calculate the relationship between the parameters as follows,
- \begin{equation} \label{eq1}
-\begin{split}
-Sensitivity\_vs\_Relatedness & = \\ \frac{\text{Average Effect of Sensitivity}(F_{d},D_{s}(av)) }{\text{Average Effect of Relatedness}(F_{d},D_{r}(av))} 
-\end{split}
-\end{equation}
-
- \begin{equation} \label{eq1}
-\begin{split}
-Sensitivity\_vs\_Visibility & = \\ \frac{\text{Average Effect of Sensitivity}(F_{d},D_{s}(av))}{\text{Average Effect of Visibility}(F_{d},D_{v}(av)) } 
-\end{split}
-\end{equation}
-
- \begin{equation} \label{eq1}
-\begin{split}
-Visibility\_vs\_Relatedness & = \\ \frac{\text{Average Effect of Visibility}(F_{d},D_{v}(av)) }{\text{Average Effect of Relatedness}(F_{d},D_{r}(av))} 
-\end{split}
-\end{equation}
 
 We then used qualitative methods to analyze the answers to the open ended question. We first developed a coding scheme by summarizing the meaning of the answers  \cite {wong2017eliciting}. This was done in NVivo \cite {saldana2015coding}. We reached code saturation at 49 participants. Then using the coding scheme two independent coders coded the data. At this stage coders were encouraged to insert any new code they considered important in interpreting the data. However, no new codes were generated at the coding stage. Since the answers were not more than two sentences long the coding process was simple and straight forward. We did not require iterative merging of codes and we present the primary codes obtained when we present the qualitative results.
 
@@ -685,6 +692,8 @@ Users demonstrated a relatively higher discomfort in sharing details with a soci
 In order to achieve the goals of the research, we calculate the effect of the variables we studies on the feeling of discomfort in disclosing data in the following subsections.
 
 \subsection{Effect of data sensitivity to the feeling of disclosure -  $F_d,D_s$}
+
+We categorized data into sensitive data and not so sensitive data based on the definitions in the USA FTC \cite {usa2016data} and the Australian Privacy Act \cite {australian2014data} for this calculation. According to their definition we identified, user's credit card details, user's health information (subscribed medicine, blood type) as sensitive data and user's age as a not so sensitive data item. 
 
 A paired t test on the feeling of discomfort in disclosing the age against that of credit card details, medicine taken, blood type and email address demonstrated a difference in means 2.14, 1.36, 0.59 and 1.31 respectively (all with a significance p$<$ 0.01). Users were most concerned about their credit card number in terms of sensitivity followed by the medicine they took. Interestingly they did not consider their blood type to be as sensitive as their email address. The average effect of sensitivity on the discomfort of data disclosure was observed to be positive and had a value of 0.2368.
 
