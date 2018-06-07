@@ -481,78 +481,112 @@ We focus on investigating the effect of data sensitivity, the relevance of the d
 
 \section {Methodology}
 
-In this section we first introduce the parameters we are measuring in tthis research. We will introduce the notations we use and the measurements we are interested in. Then in the research study section we discuss the user study we conducted and the approach we used t evaluate the measurements.
+In this section we first introduce the parameters we are measuring in this research. Then we will build the relationship we propose based on existing knowledge. Then we will discuss the user study we conducted to evaluate the relationship propose, our findings and the correlations.
 
 \subsection {Notations}
 
-The goal of our research was to calculate the relationship between sensitivity (S), relatedness (R) and visibility (V) of data on the feeling of discomfort when users make the disclosure decisions. That is, we want to know if users are more concerned about the data sensitivity when they disclose data compared to the relatedness of those data to the system they are interacting with. For example, would a user feel the same reluctance to disclose their prescribed medicine to a social networking app compared to a health app?
+The goal of our research was to calculate the relationship between sensitivity (S), relatedness (R) and visibility (V) of data on the feeling of discomfort when users make the disclosure decisions. For this we define sensitivity, visibility and relatedness of data to be parameters that depend only on a particular data item \textit{$D_i$} and the application ontext in which it is being used \textit{$C_j$}.
 
-We use the following notations to define the,
+\subsubsection{Data Sensitivity} We define the sensitivity of a particular data item to be a parameter that is dependent on the data item \textit{$D_i$} itself. That is inherently for a user their credit card number is ore sensitive than their age. We define sesitivity of a data item to be the perceived impact of loss of that particular data item. We define sensitivity in three categorical values. That is, 
 
-\begin{itemize}
-\item Effect of data sensitivity to the feeling of disclosure -  $F_d,D_s$, 
-\item Effect of data visibility to the feeling of disclosure -  $F_d,D_v$, 
-\item Effect of data relatedness to the feeling of disclosure -  $F_d,D_r$, 
-\end{itemize}
+\begin{center}
+\begin{table}[htbp]
+\caption{Participant Gender Distribution}
+\begin{center}
+\begin{tabular}{|l|l|l|} 
+\hline
+Category & Description & Sensitivity Value \\
+\hline
+Category I - Highest sesntivity & Data that could be used to identify a unique characteristic of a person. For example, a person's race, religion or HIV status. & 3 \\
+\hline
+Category II - Moderate sensitivity & Personally Identifiable information about the person. For example, a person's name, address, mobile number & 2 \\
+\hline
+Catwgory III - Low sensitivity & Any other detail about a person that may have an impact of loss, however, would not affect the person. For example, a person's high school & 1 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{center} 
 
-Then, we argue that we obtain the difference in the feeling of discomfort in data disclosure when disclosing a sensitive data item against a not so sensitive data item ( $\Delta$ $F_s$) in the same application context as,
+Therefore according to our definition the sensitivity of a data element \textit {$D_i$} takes categorical values S $\in$ \{1,2,3\}.
 
-$\Delta$ $F_s$ = Feeling of discomfort in sharing a sensitive data item - Feeling of discomfort in sharing a not so sensitive data item in the same application.
+\subsubsection {Data visibility} We define the visibility of a data element to be an inherent property gained by a particular data element \textit{$D_i$} in a particular application context \textit{$C_j$} due to the design of the application. That is how visible the data item would be by default once the user disclose the data item to the application. If the application by default allows the data to be seen only by the user, we define that data item has the lowest visibility.  
 
-Since all other parameters (R and V) in the two scenarios are kept the same, the difference in the feeling of discomfort in disclosure in this instance is only affected by the sensitivity of the data item being disclosed.
+\begin{center}
+\begin{table}[htbp]
+\caption{Participant Gender Distribution}
+\begin{center}
+\begin{tabular}{|l|l|l|} 
+\hline
+Category & Description & Visibility Value \\
+\hline
+Category I - Highest visibility & Data would be seen by any one by default. Data is visible in the application by default. For example the name of a user in Facebook & 3 \\
+\hline
+Category II - Moderate visibility & Data would be seen by a controlled set of users by default. For example,   & 2 \\
+\hline
+Catwgory III - Low visibility & Data would be seen by any one by default. Data is visible in the application by default. For example, your pin number in the banking app will not be visible to anyone & 1 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{center} 
 
-Then we take this as a percentage value to obtain the effect of sensitivity to the feeling of discomfort in disclosure. Therefore given the sensitivity positively affects the feeling of discomfort, the equation takes values [1,0] or else, if the sensitivity affected discomfort negatively, the equation would take values [0, -1]The final calculation we obtain hence, is as follows.
+Therefore according to our definition the visibility of a data element \textit {$D_i$} in an application context textit {$C_j$} takes categorical values V $\in$ \{1,2,3\}.
+
+\subsubsection {Data Relatedness} We define the relateness of a data element \textit {$D_i$} to be a property that is defined by the application context \textit {$C_j$}. That is based on the requirements of the application, the data could be highly related to the application (For example, your bank account number for your banking application) or no related at all. This is determined by the primary functionality of the application defined by the application requirements.
+
+\begin{center}
+\begin{table}[htbp]
+\caption{Participant Gender Distribution}
+\begin{center}
+\begin{tabular}{|l|l|l|} 
+\hline
+Category & Description & Relatedness Value \\
+\hline
+Category I - Highest relatedness & Data the application cannot do without. These data ara absolutely necessary for the primary functionality of the application & 3 \\
+\hline
+Category II - Moderate relatedness & Data could add additional functionality to the application. For example, data that could deliver benefits through data analysis techniques & 2 \\
+\hline
+Catwgory III - Low relatedness & Data the application can do without. & 1 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{center} 
+Therefore according to our definition the relatedness of a data element \textit {$D_i$} in an application context textit {$C_j$} also takes categorical values R $\in$ \{1,2,3\}.
+
+\subsubsection {Calculated privacy risk of a data element \textit {$D_i$} in an application context textit {$C_j$} } We then define the calculated privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context textit {$C_j$} as follows. Building up on the relationship proposed by Maximilien et al. \cite {maximilien2009privacy} we define that the privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context textit {$C_j$}  monotonicall increases with the sensitivity of a data item \textit{$S_i$} and the visibility of a data item in a given context \textit{$V_(i,j)$}. This has been previously used by Minkus and Memon \cite{minkus2014scale} in determining the privacy level of Facebook privacy settings for a particular user. Based on this, we propose that the privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context textit {$C_j$} is in a monotonically decremental relationship with the relatedness of the data element \textit {$D_i$} to the application context textit {$C_j$}. This is based on the logic that users perceive low privacy risk when discosing data items that are relevant to the applicationo as opposed to data elements that do not appear relevant. Therefore, we propose that an approximation for the privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context textit {$C_j$}n can be obtained by,
+
+%\[
+%\text {Privacy Risk $P_(i,j)$} = \frac{\text{$e^{3}$}}{\text{$e^{3}$}}
+%\]
 
 
-$F_d,D_s$ =  $\Delta$ $F_s$ \% 
+%\frac{S_{i}^{x} \times V_{(i,j)}^{y} }{ R_{(i,j)}^{z} }
+where x,y and z values could take any real number. However, as we are aiming for an approximation we limit x,y and z to whole numbers.
 
-
-Similarly, we calculated $F_d,D_v$ and $F_d,D_r$,
-
-\[ \begin{aligned} \text{Effect of Visibility} (F_{d},D_{v}) \end{aligned} =
-\frac{\Delta F_{v}}%
- {5}
-\]
-
-\[ \begin{aligned} \text{Effect of Relatedness} (F_{d},D_{r})\end{aligned} =
-\frac{\Delta F_{r}}%
- {5}
-\]
-
-Then we obtain the average values for $F_d,D_s$ , $F_d,D_v$ and $F_d,D_r$ across all participants (N = 151) to get the average feeling. We represent these by $F_d,D_s$(av) , $F_d,D_v$(av) and $F_d,D_r$(av). Using the average values, we calculate the relationship between the parameters as follows,
- \begin{equation} \label{eq1}
-\begin{split}
-Sensitivity\_vs\_Relatedness & = \\ \frac{\text{Average Effect of Sensitivity}(F_{d},D_{s}(av)) }{\text{Average Effect of Relatedness}(F_{d},D_{r}(av))} 
-\end{split}
-\end{equation}
-
- \begin{equation} \label{eq1}
-\begin{split}
-Sensitivity\_vs\_Visibility & = \\ \frac{\text{Average Effect of Sensitivity}(F_{d},D_{s}(av))}{\text{Average Effect of Visibility}(F_{d},D_{v}(av)) } 
-\end{split}
-\end{equation}
-
- \begin{equation} \label{eq1}
-\begin{split}
-Visibility\_vs\_Relatedness & = \\ \frac{\text{Average Effect of Visibility}(F_{d},D_{v}(av)) }{\text{Average Effect of Relatedness}(F_{d},D_{r}(av))} 
-\end{split}
-\end{equation}
+According to this calculation Privacy Risk $P_(i,j)$  of a data element \textit {$D_i$} in an application context textit {$C_j$} $\in$ \{x$\mid$ x $in$ ${\rm I\!R}$ where, 0 $\leq$ x$\}. This relationship could be used to measure the privacy risk of data in a given application context so that developers and system designers could get an idea as to how appropriate privacy measures should be implemented for data items in an application design. However, this is a logically proposed relationship. Even though the initial relationship proposed by Maximilien et al has been used in many research that attempts to measure privacy in different contexts, it has not yet been verified through empriccal evidence. Therefore, next we conduct a user study to observe how closely this relationship would approximate the actual perceived user privacy.
 
 
 \subsection {Research Study}
 
-Our goal in this research is to understand how sensitivity, visibility and relatedness affect associated privacy risk of a data item. Going along with Maximilien et al. \cite {maximilien2009privacy} we define privacy risk to be \enquote{a measurement that determines the user's feeling of discomfort in disclosing information associated with this item}. We conduct a user survey to understand user decision making when they disclose their personal data into software systems. For this, we conducted an online survey with 151 users. We designed the survey with 4 simple questions with Likert scales. We used a list of 10 data items and four different mobile application contexts in the questionnaire. The application contexts we defined were,
+Our goal in this research is to observe how the close the relationship we propossed using data sensitivity, visibility and relatedness approximate the actual perceveid privacy risk by users. Going along with Maximilien et al. \cite {maximilien2009privacy} we define perceived privacy risk to be \enquote{a measurement that determines the user's feeling of discomfort in disclosing information associated with a data item}. Therefore, we define,
+
+\[
+\texti{Privacy Risk $P_(i,j)$} = \text{user's feelilng of discomfort in disclosing an data item \textit {$D_i$} in an application context textit {$C_j$}}
+\]
+
+In order to obtain the discomfort of data disclosure of users we defined three application contexts and ten data elements. The application contexts we defined were,
 
 \begin{itemize}
-\item Undefined application
-\item Health Care application
+\item Health Care application - with data being visible to the user and xx
 \item Social Networking application - with no control over data visibility (Cannot control who can view the data once disclosed)
-\item Banking application
+\item Banking application - with the data being visible only to the user (and the bank)
 \end{itemize}
 
-We defined the data items including demographic data and sensitive data following the Data Protection Regulations. The data items we provided are name, age, address, mobile number, email address, occupation, blood type, credit card number, medicine taken, and birthday. We asked the participants how they would feel if they are to disclose the 10 data items in the four application contexts. We define a five point Likert scale to express their \textit{feeling of disclosure} $F_d$, with values, very uncomfortable, somewhat uncomfortable, neutral, somewhat comfortable and very comfortable. We consider $F_d$ to be a function of data sensitivity ($D_s$), visibility of the data item ($D_v$) and the relatedness of the data item to the context of the software system ($D_r$). Our goal is to determine how $D_s$, $D_v$ and $D_r$ affect $F_d$.
+We communicated three different visibility levels in the three application contexts. Then, we defined the data items including demographic data and sensitive data following the Data Protection Regulations. The data items we provided are name, age, address, mobile number, email address, occupation, blood type, credit card number, medicine taken, and birthday. We asked the participants how they would feel if they are to disclose these 10 data items in the four application contexts. We define a five point Likert scale to express their \textit{feeling of disclosure} $F_d$, with values, very uncomfortable, somewhat uncomfortable, neutral, somewhat comfortable and very comfortable. We alternatively used reverse ordered likert scales to ensure the validity of the answers. We consider $F_d$ to be a function of the sensitivity of the data item i ($S_i$), visibility of the data item in the application j ($V_j$) and the relatedness of the data item to the context of the software system j ($R_j$). Our goal is to determine how close the relationship we proposed approximate $F_d$.
 
-Following these four questions we also included an open ended question in the questionnaire to elicit any factors other than what we explicitly investigated in the survey, that could affect users data disclosure decisions when they interact with software systems. 
+Following these four questions we also included an open ended question in the questionnaire to further observe the reasons for the difference in the feeling of discomfort ($F_d$) users expressed. With this we aimed to obtain further insights as to why users demonstrate different discomfort levels when they disclose different data items into different application contexts. 
 
 At the end of the survey, we included questions to extract the demographics of the participants. However, we included an option \textit{prefer not to say} in all these questions, so that users could avoid disclosing their age, gender and educational background.
 
@@ -649,20 +683,27 @@ Very Uncomfortable & 5 \\
 \end{table}
 \end{center}
 
+Through this we obtained $F_d$ $\in$ \{1,2,3,4,5\}. Then we averaged $F_d$ across all 151 participants to obtain the mean perceived privacy risk of users for the 30 scenarios (ten data items in three application contexts).
 
+Next, in order to see how our calculated privacy risk $P_(i,j)$ approximate the perceived privacy risk $F_d$, we need to obtain the values for $P_(i,j)$ for the ten data items in the three different application contexts. As our goal is to introduce a metric for software developers to evaluate the perceived privacy risk of users, we calculated $P_(i,j)$ through a focus group with 4 participants with a software development experience. We believe this approach would closely represent the context in which software developers would discuss and evaluate the sensitivity, visibility and the relatedness of the data elements they use in software systems, at design stage. 
 
-We then used qualitative methods to analyze the answers to the open ended question. We first developed a coding scheme by summarizing the meaning of the answers  \cite {wong2017eliciting}. This was done in NVivo \cite {saldana2015coding}. We reached code saturation at 49 participants. Then using the coding scheme two independent coders coded the data. At this stage coders were encouraged to insert any new code they considered important in interpreting the data. However, no new codes were generated at the coding stage. Since the answers were not more than two sentences long the coding process was simple and straight forward. We did not require iterative merging of codes and we present the primary codes obtained when we present the qualitative results.
+We asked the participants to first take the data items as individual elements and vategorize them according to the sensitivity of the data item. We provided them with the three categories we used in table 01. Next, for all three application scenarios, we asked them to categorize the ten data items according to their relatedness to the application context. For this we provided them with table III. As sensitivity was pre-determined and communicated to users in the user study we did not evaluate it here. In the results section we present the different calculated privacy risk ($P_(i,j)$) values we obtained and the corresponding perceived privacy risk ($F_d$) values we compaired.
+
+Finally used qualitative methods to analyze the answers to the open ended question. We first developed a coding scheme by summarizing the meaning of the answers  \cite {wong2017eliciting}. This was done in NVivo \cite {saldana2015coding}. We reached code saturation at 49 participants. Then using the coding scheme two independent coders coded the data. At this stage coders were encouraged to insert any new code they considered important in interpreting the data. However, no new codes were generated at the coding stage. Since the answers were not more than two sentences long the coding process was simple and straight forward. We did not require iterative merging of codes and we present the primary codes obtained when we present the qualitative results.
 
 \section {Results}
 
-We tested the validity of our results with Cronbach's alpha (0.91) (a Cronbach's alpha $>$ 0.7 is considered acceptable \cite {nunnally1967psychometric}) and the participant adequacy for correlations with KMO (KMO =  0.8269) (A KMO value $0.8$ is considered good in calculating correlations among parameters \cite {kim1978factor}). Following charts (image 1-4) shows the averages of the disclosure feeling of the 151 participants on the 10 data items across the four scenarios.
+We tested the validity of our results with Cronbach's alpha (0.91) (a Cronbach's alpha $>$ 0.7 is considered acceptable \cite {nunnally1967psychometric}) and the participant adequacy for correlations with KMO (KMO =  0.8269) (A KMO value $0.8$ is considered good in calculating correlations among parameters \cite {kim1978factor}). 
 
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.5\textwidth]{Average_Generic}
-\caption{Feeling of Discomfort in Disclosure - Undefined application}
-\end{center}
-\end{figure}
+
+
+
+
+
+
+
+
+Following charts (image 1-4) shows the averages of the disclosure feeling of the 151 participants on the 10 data items across the three scenarios.
 
 \begin{figure}[h]
 \begin{center}
@@ -685,38 +726,9 @@ We tested the validity of our results with Cronbach's alpha (0.91) (a Cronbach's
 \end{center}
 \end{figure}
 
-It can be seen that irrespective of the context of disclosure, participants had a higher discomfort in disclosing their credit card number. This is because users consider their credit card number to be a highly sensitive data item.  Similarly we observed higher discomfort in disclosing medicine taken and blood type. However, the discomfort in disclosing the credit card number was very low for banking app because the credit card number is a data item that is relevant for the banking app. This suggests that users feel more comfortable sharing even sensitive data if the data item is relevant for the application. This observation is also observed with lowered discomfort in sharing medicine taken and blood type with a health care app.
-
-Users demonstrated a relatively higher discomfort in sharing details with a social networking site. We defined the social networking site to have no control over data visibility once the data is disclosed. Therefore, we can assume that users have concern over data visibility when they disclose data into an application. 
-
-In order to achieve the goals of the research, we calculate the effect of the variables we studies on the feeling of discomfort in disclosing data in the following subsections.
-
-\subsection{Effect of data sensitivity to the feeling of disclosure -  $F_d,D_s$}
-
-We categorized data into sensitive data and not so sensitive data based on the definitions in the USA FTC \cite {usa2016data} and the Australian Privacy Act \cite {australian2014data} for this calculation. According to their definition we identified, user's credit card details, user's health information (subscribed medicine, blood type) as sensitive data and user's age as a not so sensitive data item. 
-
-A paired t test on the feeling of discomfort in disclosing the age against that of credit card details, medicine taken, blood type and email address demonstrated a difference in means 2.14, 1.36, 0.59 and 1.31 respectively (all with a significance p$<$ 0.01). Users were most concerned about their credit card number in terms of sensitivity followed by the medicine they took. Interestingly they did not consider their blood type to be as sensitive as their email address. The average effect of sensitivity on the discomfort of data disclosure was observed to be positive and had a value of 0.2368.
 
 
-\subsection{Effect of data relatedness to the feeling of disclosure -  $F_d,D_r$}
 
-In order to calculate the effect of relatedness, we identified related data for the three application contexts we defined (disregarding the generic application context). We defined blood type to be related to the health care application, and medicine taken and blood type to be related to the health care app. We used the same data items in the social networking app as instances of disclosing unrelated data. The average effect of relatedness on data disclosure discomfort we received was -0.442, which suggests that the feeling of discomfort sharing data when the data item is related to the application is negative. A paired t test between the feeling of discomfort in disclosing medicine and blood type in a medical application against a social networking app had difference in means 2.46 and 1.84 respectively (p$<$0.01). The feeling of discomfort in disclosing credit card details in a banking app against a social networking app had a difference in means 2.32 (p$<$0.01). 
-
-\subsection{Effect of data visibility to the feeling of disclosure -  $F_d,D_v$}
-
-For this, we told the participants that the data visibility in the social networking app is not controllable for the user. That is they did not have control over who could see the data in the application. We also told them that the generic app had control for visibility. Then we compared the discomfort of sharing their age, address, email address and mobile number. We obtained the average effect of visibility on data disclosure discomfort as 0.1082. This shows that users were more uncomfortable sharing their data in the event they had no control over the visibility over data. 
-
-\subsection {Relationship among sensitivity, visibility and relatedness}
-We observed that participants were most concerned about the relatedness of their data for a particular application context when they disclose data. $\mid$ $F_d,D_r(av)$ $\mid$ had a value of 0.4, where as $F_d,D_s(av)$ had a value of 0.2368. Both sensitivity and visibility of data were directly proportional to the discomfort of data disclosure (effect $>$ 0). Visibility against sensitivity had an increased effect of 2 fold. That is users were 2 times more uncomfortable sharing their data considering sensitivity of the data compared to data visibility. Consequently, relatedness had an increased effect of 4 fold. As expected, the relatedness of a data item to the application context was observed to be inversely proportional to the discomfort in sharing data items. The average effect of relatedness on discomfort of disclosing data had a value of 0.531 (effect $<$ 0).
-
-Maximilien et al. \cite {maximilien2009privacy} have previously shown that the sensitivity of content multiplied by its visibility in a given context gives the privacy risk associated with the content. He suggested that hence, a user could understand the level of privacy risk associated with the content s/he discloses. We integrate this concept with the findings of our study. That is sensitivity and visibility of data items are directly proportional to the privacy risk associated with data where as relatedness of the data item to the application context in which it is being disclosed is indirectly proportional to the privacy risk. Also users feel 2 times more comfortable sharing their data (lowered perceived privacy risk) when they disclose their data when data is relevant to the context. This gives us the relationship below,
-
-\[ \text{Privacy Risk}  =
-\frac{
-     \text{Sensitivity} \times \text{Visibility} }
- {
-      2 \times  \text{Relatedness }}
-\]
 
 \subsection{Qualitative analysis on factors that affect the feeling of discomfort in data disclosure}
 
