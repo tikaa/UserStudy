@@ -493,7 +493,8 @@ The goal of our research was to calculate the relationship between sensitivity (
 \begin{table}[htbp]
 \caption{Participant Gender Distribution}
 \begin{center}
-\begin{tabular}{|l|l|l|} 
+\begin{adjustbox}{width=0.5\textwidth} 
+\begin{tabular}{|p{0.2\linewidth}|p{0.7\linewidth}|p{0.1\linewidth}|} 
 \hline
 Category & Description & Sensitivity Value \\
 \hline
@@ -504,6 +505,7 @@ Category II - Moderate sensitivity & Personally Identifiable information about t
 Catwgory III - Low sensitivity & Any other detail about a person that may have an impact of loss, however, would not affect the person. For example, a person's high school & 1 \\
 \hline
 \end{tabular}
+\end{adjustbox}
 \end{center}
 \end{table}
 \end{center} 
@@ -516,7 +518,8 @@ Therefore according to our definition the sensitivity of a data element \textit 
 \begin{table}[htbp]
 \caption{Participant Gender Distribution}
 \begin{center}
-\begin{tabular}{|l|l|l|} 
+\begin{adjustbox}{width=0.5\textwidth} 
+\begin{tabular}{|p{0.2\linewidth}|p{0.7\linewidth}|p{0.1\linewidth}|} 
 \hline
 Category & Description & Visibility Value \\
 \hline
@@ -527,6 +530,7 @@ Category II - Moderate visibility & Data would be seen by a controlled set of us
 Catwgory III - Low visibility & Data would be seen by any one by default. Data is visible in the application by default. For example, your pin number in the banking app will not be visible to anyone & 1 \\
 \hline
 \end{tabular}
+\end{adjustbox}
 \end{center}
 \end{table}
 \end{center} 
@@ -539,7 +543,8 @@ Therefore according to our definition the visibility of a data element \textit {
 \begin{table}[htbp]
 \caption{Participant Gender Distribution}
 \begin{center}
-\begin{tabular}{|l|l|l|} 
+\begin{adjustbox}{width=0.5\textwidth} 
+\begin{tabular}{|p{0.2\linewidth}|p{0.7\linewidth}|p{0.1\linewidth}|} 
 \hline
 Category & Description & Relatedness Value \\
 \hline
@@ -550,30 +555,30 @@ Category II - Moderate relatedness & Data could add additional functionality to 
 Catwgory III - Low relatedness & Data the application can do without. & 1 \\
 \hline
 \end{tabular}
+\end{adjustbox}
 \end{center}
 \end{table}
 \end{center} 
-Therefore according to our definition the relatedness of a data element \textit {$D_i$} in an application context textit {$C_j$} also takes categorical values R $\in$ \{1,2,3\}.
+Therefore according to our definition the relatedness of a data element \textit {$D_i$} in an application context \textit {$C_j$} also takes categorical values R $\in$ \{1,2,3\}.
 
-\subsubsection {Calculated privacy risk of a data element \textit {$D_i$} in an application context textit {$C_j$} } We then define the calculated privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context textit {$C_j$} as follows. Building up on the relationship proposed by Maximilien et al. \cite {maximilien2009privacy} we define that the privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context textit {$C_j$}  monotonicall increases with the sensitivity of a data item \textit{$S_i$} and the visibility of a data item in a given context \textit{$V_(i,j)$}. This has been previously used by Minkus and Memon \cite{minkus2014scale} in determining the privacy level of Facebook privacy settings for a particular user. Based on this, we propose that the privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context textit {$C_j$} is in a monotonically decremental relationship with the relatedness of the data element \textit {$D_i$} to the application context textit {$C_j$}. This is based on the logic that users perceive low privacy risk when discosing data items that are relevant to the applicationo as opposed to data elements that do not appear relevant. Therefore, we propose that an approximation for the privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context textit {$C_j$}n can be obtained by,
+\subsubsection {Calculated privacy risk of a data element \textit {$D_i$} in an application context \textit {$C_j$} } We then define the calculated privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context \textit {$C_j$} as follows. Building up on the relationship proposed by Maximilien et al. \cite {maximilien2009privacy} we define that the privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context \textit {$C_j$}  monotonicall increases with the sensitivity of a data item \textit{$S_i$} and the visibility of a data item in a given context \textit{$V_{(i,j)}$}. This has been previously used by Minkus and Memon \cite{minkus2014scale} in determining the privacy level of Facebook privacy settings for a particular user. Based on this, we propose that the privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context \textit {$C_j$} is in a monotonically decremental relationship with the relatedness of the data element \textit {$D_i$} to the application context \textit {$C_j$}. This is based on the logic that users perceive low privacy risk when discosing data items that are relevant to the applicationo as opposed to data elements that do not appear relevant. Therefore, we propose that an approximation for the privacy risk \textit{$P_c$} of a data element \textit {$D_i$} in an application context \textit {$C_j$} can be obtained by,
 
-%\[
-%\text {Privacy Risk $P_(i,j)$} = \frac{\text{$e^{3}$}}{\text{$e^{3}$}}
-%\]
+\[
+\text {Privacy Risk $P_(i,j)$} =\frac{S_{i}^a \times V_{(i,j)}^b}{R_{(i,j)}^ c}
+\]
 
+where a,b and c values could take any real number. However, as we are aiming for an approximation we limit a,b,c to whole numbers.
 
-%\frac{S_{i}^{x} \times V_{(i,j)}^{y} }{ R_{(i,j)}^{z} }
-where x,y and z values could take any real number. However, as we are aiming for an approximation we limit x,y and z to whole numbers.
-
-According to this calculation Privacy Risk $P_(i,j)$  of a data element \textit {$D_i$} in an application context textit {$C_j$} $\in$ \{x$\mid$ x $in$ ${\rm I\!R}$ where, 0 $\leq$ x$\}. This relationship could be used to measure the privacy risk of data in a given application context so that developers and system designers could get an idea as to how appropriate privacy measures should be implemented for data items in an application design. However, this is a logically proposed relationship. Even though the initial relationship proposed by Maximilien et al has been used in many research that attempts to measure privacy in different contexts, it has not yet been verified through empriccal evidence. Therefore, next we conduct a user study to observe how closely this relationship would approximate the actual perceived user privacy.
+According to this calculation Privacy Risk $P_(i,j)$  of a data element \textit {$D_i$} in an application context \textit {$C_j$} $\in$ \{x$\mid$ x $in$ ${\rm I\!R}$ where, 0 $\leq$ x\}. This relationship could be used to measure the privacy risk of data in a given application context so that developers and system designers could get an idea as to how appropriate privacy measures should be implemented for data items in an application design. However, this is a logically proposed relationship. Even though the initial relationship proposed by Maximilien et al has been used in many research that attempts to measure privacy in different contexts, it has not yet been verified through empriccal evidence. Therefore, next we conduct a user study to observe how closely this relationship would approximate the actual perceived user privacy.
 
 
 \subsection {Research Study}
 
-Our goal in this research is to observe how the close the relationship we propossed using data sensitivity, visibility and relatedness approximate the actual perceveid privacy risk by users. Going along with Maximilien et al. \cite {maximilien2009privacy} we define perceived privacy risk to be \enquote{a measurement that determines the user's feeling of discomfort in disclosing information associated with a data item}. Therefore, we define,
+Our goal in this research is to observe how the close the relationship we propossed using data sensitivity, visibility and relatedness approximate the actual perceveid privacy risk by users. Going along with Maximilien et al. \cite {maximilien2009privacy} we define perceived privacy risk to be \enquote{a measurement that determines the user's feeling of discomfort in disclosing information associated with a data item}. Therefore, we define Privacy Risk $P_(i,j)$ such that,
 
 \[
-\texti{Privacy Risk $P_(i,j)$} = \text{user's feelilng of discomfort in disclosing an data item \textit {$D_i$} in an application context textit {$C_j$}}
+\text{ $P_(i,j)$} = \text{user's feeling of discomfort in disclosing an data \\
+ item \textit {$D_i$} in an application context \textit {$C_j$}}
 \]
 
 In order to obtain the discomfort of data disclosure of users we defined three application contexts and ten data elements. The application contexts we defined were,
@@ -694,6 +699,31 @@ Finally used qualitative methods to analyze the answers to the open ended questi
 \section {Results}
 
 We tested the validity of our results with Cronbach's alpha (0.91) (a Cronbach's alpha $>$ 0.7 is considered acceptable \cite {nunnally1967psychometric}) and the participant adequacy for correlations with KMO (KMO =  0.8269) (A KMO value $0.8$ is considered good in calculating correlations among parameters \cite {kim1978factor}). 
+
+The following table shows the results when we tested different models for calculated privacy risk $P_(i,j)$ against the perceived privacy risk $F_d$. The model fitting was done in Matlab curve fitting app.
+
+\begin{center}
+\begin{table}[htbp]
+\caption{Participant Gender Distribution}
+\begin{center}
+\begin{adjustbox}{width=0.5\textwidth} 
+\begin{tabular}{|p{0.6\linewidth}|p{0.4\linewidth}|} 
+\hline
+Model & Goodness of Fit \\
+\hline
+scenario 1 : $\frac{S_{i}^1 \times V_{(i,j)}^1}{R_{(i,j)}^1}$ & SSE : 67.8  $R^2$ = 0.6 RMSE = 1.5 \\
+\hline
+scenario 2 : $\frac{S_{i}^2 \times V_{(i,j)}^2}{R_{(i,j)}^ 2}$ & SSE : 14.4  $R^2$  = 0.35 \\
+\hline
+scenario 3 : $\frac{S_{i}^3 \times V_{(i,j)}^3}{R_{(i,j)}^3}$ & SSE :  11.68  $R^2$ = 0.575  \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{center}
+\end{table}
+\end{center} 
+
+With these values, we can see that the relationship $\frac{S_{i}^3 \times V_{(i,j)}^3}{R_{(i,j)}^3}$ best represents the perceived privacy risk of users in a given application context. However, we also observed the outliers to the model to be somewhat high. This is because the mean values we obtained for $F_d$ had high standard deviations. That is , for the same S,V and R combination for a particular data point received an $F_d$ value of 1 from some users and 5 from some. Prevoius research has shown that the personality of a person has a significant contribution to th eperceived privacy risk of that person. It has been said that users could be profiled as privacy fundamentalists, privacy pragmatists and privacy unconerned according to their personalities. We believe the different $F_d$ values we obtained to be a result of this. In our research our focus was to model the perceived privayc risk eliminating the personality traits of a person. Therefore, by design we did not capture the privacy profile of our participants. However, when we establish a model to communicate the perceived privacy risk of users, for th emodel to be applicable for all users, we believe tha tidealy it should be based on the perceived privacy risk of privacy fundamentalists. In that case, the perceived privacy risk would be highest. If a system is designed to facilitate the privacy risks of privacy fundamentalists, it would by default facilitate the privacy requirements of all users. Therefore, as future work, we aim to run our study with privacy profiling of participants in order to observe how our model captures the privacy requirements of users with different privacy personalities. 
 
 
 
