@@ -1,0 +1,119 @@
+\begin{thebibliography}{10}
+
+\bibitem{malhotra2004internet}
+N.~K. Malhotra, S.~S. Kim, and J.~Agarwal, ``Internet users' information
+  privacy concerns (iuipc): The construct, the scale, and a causal model,''
+  {\em Information systems research}, vol.~15, no.~4, pp.~336--355, 2004.
+
+\bibitem{li2010understanding}
+H.~Li, R.~Sarathy, and H.~Xu, ``Understanding situational online information
+  disclosure as a privacy calculus,'' {\em Journal of Computer Information
+  Systems}, vol.~51, no.~1, pp.~62--71, 2010.
+
+\bibitem{kobsa2007privacy}
+A.~Kobsa, ``Privacy-enhanced web personalization,'' in {\em The adaptive web},
+  pp.~628--670, Springer-Verlag, 2007.
+
+\bibitem{knijnenburg2013helping}
+B.~P. Knijnenburg and A.~Kobsa, ``Helping users with information disclosure
+  decisions: potential for adaptation,'' in {\em Proceedings of the 2013
+  international conference on Intelligent user interfaces}, pp.~407--416, ACM,
+  2013.
+
+\bibitem{knijnenburg2013making}
+B.~P. Knijnenburg and A.~Kobsa, ``Making decisions about privacy: information
+  disclosure in context-aware recommender systems,'' {\em ACM Transactions on
+  Interactive Intelligent Systems (TiiS)}, vol.~3, no.~3, p.~20, 2013.
+
+\bibitem{malheiros2013fairly}
+M.~Malheiros, S.~Preibusch, and M.~A. Sasse, ``“fairly truthful”: The
+  impact of perceived effort, fairness, relevance, and sensitivity on personal
+  data disclosure,'' in {\em International Conference on Trust and Trustworthy
+  Computing}, pp.~250--266, Springer, 2013.
+
+\bibitem{maximilien2009privacy}
+E.~M. Maximilien, T.~Grandison, T.~Sun, D.~Richardson, S.~Guo, and K.~Liu,
+  ``Privacy-as-a-service: Models, algorithms, and results on the facebook
+  platform,'' in {\em Proceedings of Web}, vol.~2, 2009.
+
+\bibitem{wang2016context}
+J.~Wang, N.~Wang, and H.~Jin, ``Context matters?: How adding the obfuscation
+  option affects end users' data disclosure decisions,'' in {\em Proceedings of
+  the 21st International Conference on Intelligent User Interfaces},
+  pp.~299--304, ACM, 2016.
+
+\bibitem{nissenbaum2009privacy}
+H.~Nissenbaum, {\em Privacy in context: Technology, policy, and the integrity
+  of social life}.
+\newblock Stanford University Press, 2009.
+
+\bibitem{dennett2000little}
+D.~Dennett, ``With a little help from my friends,'' {\em Dennett’s
+  philosophy: A comprehensive assessment}, pp.~327--388, 2000.
+
+\bibitem{besmer2010impact}
+A.~Besmer, J.~Watson, and H.~R. Lipford, ``The impact of social navigation on
+  privacy policy configuration,'' in {\em Proceedings of the Sixth Symposium on
+  Usable Privacy and Security}, p.~7, ACM, 2010.
+
+\bibitem{acquisti2012impact}
+A.~Acquisti, L.~K. John, and G.~Loewenstein, ``The impact of relative standards
+  on the propensity to disclose,'' {\em Journal of Marketing Research},
+  vol.~49, no.~2, pp.~160--174, 2012.
+
+\bibitem{bansal2010impact}
+G.~Bansal, D.~Gefen, {\em et~al.}, ``The impact of personal dispositions on
+  information sensitivity, privacy concern and trust in disclosing health
+  information online,'' {\em Decision support systems}, vol.~49, no.~2,
+  pp.~138--150, 2010.
+
+\bibitem{minkus2014scale}
+T.~Minkus and N.~Memon, ``On a scale from 1 to 10, how private are you? scoring
+  facebook privacy settings,'' in {\em Proceedings of the Workshop on Usable
+  Security (USEC 2014). Internet Society}, 2014.
+
+\bibitem{john2010strangers}
+L.~K. John, A.~Acquisti, and G.~Loewenstein, ``Strangers on a plane:
+  Context-dependent willingness to divulge sensitive information,'' {\em
+  Journal of consumer research}, vol.~37, no.~5, pp.~858--873, 2010.
+
+\bibitem{wagner2016national}
+J.~Wagner and A.~Benecke, ``National legislation within the framework of the
+  gdpr,'' {\em European Data Protection Law Review}, vol.~2, no.~3,
+  pp.~353--361, 2016.
+
+\bibitem{oetzel2014systematic}
+M.~C. Oetzel and S.~Spiekermann, ``A systematic methodology for privacy impact
+  assessments: a design science approach,'' {\em European Journal of
+  Information Systems}, vol.~23, no.~2, pp.~126--150, 2014.
+
+\bibitem{senarath2018why}
+A.~Senarath and N.~A.~G. Arachchilage, ``Why developers cannot embed privacy
+  into software systems? an empirical investigation,'' in {\em Proceedings of
+  the 22nd conference of Evaluation and Assessment in Software Engineering
+  (EASE) 2018}, p.~to appear, ACM, 2018.
+
+\bibitem{wong2017eliciting}
+R.~Y. Wong, D.~K. Mulligan, E.~Van~Wyk, J.~Pierce, and J.~Chuang, ``Eliciting
+  values reflections by engaging privacy futures using design workbooks,'' {\em
+  Proceedings of the ACM on Human Computer Interaction}, vol.~1, no.~2, 2017.
+
+\bibitem{saldana2015coding}
+J.~Salda{\~n}a, {\em The coding manual for qualitative researchers}.
+\newblock Sage, 2015.
+
+\bibitem{nunnally1967psychometric}
+J.~C. Nunnally, I.~H. Bernstein, and J.~M.~t. Berge, {\em Psychometric theory},
+  vol.~226.
+\newblock McGraw-hill New York, 1967.
+
+\bibitem{kim1978factor}
+J.-O. Kim and C.~W. Mueller, {\em Factor analysis: Statistical methods and
+  practical issues}, vol.~14.
+\newblock Sage, 1978.
+
+\bibitem{westin1991equifax}
+A.~Westin, H.~LOUIS, {\em et~al.}, ``Equifax-harris consumer privacy survey,''
+  {\em Conducted for Equifax Inc}, 1991.
+
+\end{thebibliography}
