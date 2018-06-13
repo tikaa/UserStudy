@@ -38,7 +38,7 @@ Users are known to be reluctant to disclose their data into software systems whe
 
 
 
-Users are most likely to disclose data to a software system if they feel that the ways through which the system could compromise their privacy (data sharing, data selling) from the data they disclose is minimum  \cite {kobsa2007privacy, li2010understanding, malhotra2004internet}. Therefore, understanding the data disclosure decisions made by users when interacting with software systems could help understanding the perceived privacy risk by users. Understanding this perceived privacy risk of users when they interact with software systems is important to enhance users satisfaction in data disclosure as well as designing systems to ensure the privacy risk is appropriately handled by design. For example, it has been said that users are likely to feel more comfortable to share their data when they know how the system would use the data \cite {knijnenburg2013helping}. Therefore, system designs could communicate how they use data with a higher perceived risk in the system and implement measure to protect data with higher privacy risk in order to reduce the perceived privacy risk by users. However, for this, it is essential that system developers understand which data users would feel most uncomfortable sharing. Nevertheless, among many research that attempts to interpret users privacy risk and their data disclosure decisions \cite {knijnenburg2013making, li2010understanding, wang2016context, malheiros2013fairly, dennett2000little}, so far no attempt has been made to communicate this perceived privacy risk of users when they disclose data into systems, in a comprehensive way to software developers.
+Users are most likely to disclose data to a software system if they feel that the ways through which the system could compromise their privacy (data sharing, data selling) from the data they disclose is minimum  \cite {kobsa2007privacy, li2010understanding, malhotra2004internet}. Therefore, understanding the data disclosure decisions made by users when interacting with software systems could help understanding the perceived privacy risk by users. Understanding this perceived privacy risk of users when they interact with software systems is important to enhance users satisfaction in data disclosure as well as designing systems to ensure the privacy risk is appropriately handled by design. For example, it has been said that users are likely to feel more comfortable to share their data when they know how the system would use the data \cite {knijnenburg2013helping}. Therefore, system designs could communicate how they use data with a higher perceived risk in the system and implement measure to protect data with higher privacy risk in order to reduce the perceived privacy risk by users. However, for this, it is essential that system developers understand which data users consider to have a higher privacy risk in disclosure. Nevertheless, among many research that attempts to interpret users privacy risk and their data disclosure decisions \cite {knijnenburg2013making, li2010understanding, wang2016context, malheiros2013fairly, dennett2000little}, so far no attempt has been made to communicate this perceived privacy risk of users when they disclose data into systems, in a comprehensive way to software developers.
 
 
 
@@ -69,7 +69,9 @@ In this section we first introduce the parameters of data we are interested in. 
 
 The goal of our research was to develop a measurement to calculate the perceived privacy risk of users when they disclose data into software systems. Referring to previous research we identified data sensitivity (S), relatedness (R) and visibility (V) of data on the perceived privacy risk of users when they make the disclosure decisions. For the context of this research we define data sensitivity, visibility and relatedness of data to be parameters that depend only on a particular data item \textit{$D_i$} and the application context in which it is being used \textit{$C_j$}. Next, we define these parameters for the context of this research.
 
-\subsubsection{Data Sensitivity} We define the sensitivity of a particular data item to be a parameter that is dependent on the data item \textit{$D_i$} itself. That is inherently for a user their credit card number is ore sensitive than their age. We define sensitivity of a data item to be the perceived impact of loss of that particular data item. We define sensitivity in three categorical values. These categories are defined based on the definition of sensitive data in the European Data Protection Regulations (GDPR) \cite {wagner2016national} and logical reasoning. We used three categories for this categorization as it is cognitively more manageable than complex scales with more levels of categorization \cite {oetzel2014systematic}. The categories we propose are presented in table I.  
+\subsubsection{Data Sensitivity} 
+
+We define the sensitivity of a particular data item to be a parameter that is dependent on the data item \textit{$D_i$} itself. That is inherently for a user their credit card number is ore sensitive than their age. We define sensitivity of a data item to be the perceived impact of loss of that particular data item. We define sensitivity in three categorical values. These categories are defined based on the definition of sensitive data in the European Data Protection Regulations (GDPR) \cite {wagner2016national} and logical reasoning. We used three categories for this categorization as it is cognitively more manageable than complex scales with more levels of categorization \cite {oetzel2014systematic}. The categories we propose are presented in table 1.  
 
 \begin{center}
 \begin{table}[htbp]
@@ -94,7 +96,9 @@ Category III - Low sensitivity & Any other detail about a person that may have a
 
 Therefore according to our definition the sensitivity of a data element \textit {$D_i$} takes categorical values \textit {$S_i$} $\in$ \{1,2,3\}.
 
-\subsubsection {Data visibility} We define the visibility of a data element to be an inherent property gained by a particular data element \textit{$D_i$} in a particular application context \textit{$C_j$} due to the design of the application. That is how visible the data item would be by default once the user disclose the data item to the application. If the application by default allows the data to be seen only by the user, we define that data item has the lowest visibility. These categories are defined on the basis of the survey conducted by Minkus et al. \cite{minkus2014scale} in their attempts to scale Facebook privacy settings according to their visibility, they have asked participants questions that investigate the users perception of visibility of their content in Facebook. Building on their reasoning we logically form the three visibility categories presented in Table II.
+\subsubsection{Data visibility} 
+
+We define the visibility of a data element to be an inherent property gained by a particular data element \textit{$D_i$} in a particular application context \textit{$C_j$} due to the design of the application. That is how visible the data item would be by default once the user disclose the data item to the application. If the application by default allows the data to be seen only by the user, we define that data item has the lowest visibility. These categories are defined on the basis of the survey conducted by Minkus et al. \cite{minkus2014scale} in their attempts to scale Facebook privacy settings according to their visibility, they have asked participants questions that investigate the users perception of visibility of their content in Facebook. Building on their reasoning we logically form the three visibility categories presented in Table 2.
 
 \begin{center}
 \begin{table}[htbp]
@@ -119,7 +123,9 @@ Category III - Low visibility & Data would be seen by any one by default. Data i
 
 Therefore according to our definition the visibility of a data element \textit {$D_i$} in an application context \textit {$C_j$} takes categorical values \textit {$V_{i,j}$} $\in$ \{1,2,3\}.
 
-\subsubsection {Data Relatedness} We define the relatedness of a data element \textit {$D_i$} to be a property that is defined by the application context \textit {$C_j$}. That is based on the requirements of the application, the data could be highly related to the application (For example, your bank account number for your banking application) or no related at all. This is determined by the primary functionality of the application defined by the application requirements. We build this categorization based on logical reasoning. While it has been widely accepted that the relatedness of data affects the privacy risk perceived by users when they disclose data into software systems, so far there is no evidence as to how related a data item should be in order to make users feel comfortable sharing those data into the system. Therefore, based on logical reasoning, we propose the categorization present in table III for scaling data relatedness to a software system. 
+\subsubsection{Data Relatedness} 
+
+We define the relatedness of a data element \textit {$D_i$} to be a property that is defined by the application context \textit {$C_j$}. That is based on the requirements of the application, the data could be highly related to the application (For example, your bank account number for your banking application) or no related at all. This is determined by the primary functionality of the application defined by the application requirements. We build this categorization based on logical reasoning. While it has been widely accepted that the relatedness of data affects the privacy risk perceived by users when they disclose data into software systems, so far there is no evidence as to how related a data item should be in order to make users feel comfortable sharing those data into the system. Therefore, based on logical reasoning, we propose the categorization present in table 3 for scaling data relatedness to a software system. 
 
 \begin{center}
 \begin{table}[htbp]
@@ -161,7 +167,7 @@ According to this calculation Privacy Risk $P_{(i,j)}$  of a data element \texti
 
 Next, in order to see how closely the proposed model fit the actual perceived privacy risk of users when they disclose data we conducted a survey study.
 
-\subsection {Research Study}
+\subsection{Research Study}
 
 Our goal in this research is to observe how the close the relationship we proposed using data sensitivity, visibility and relatedness approximate the actual perceived privacy risk by users. Building on the work of Maximilien et al. \cite {maximilien2009privacy} we define perceived privacy risk $P_{i,j}$ to be \enquote{a measurement that determines the user's feeling of discomfort in disclosing an data item \textit {$D_i$} in an application context \textit {$C_j$}}. 
 
@@ -179,7 +185,7 @@ Following these four questions we also included an open ended question in the qu
 
 At the end of the survey, we included questions to extract the demographics of the participants. However, we included an option \textit{prefer not to say} in all these questions, so that users could avoid disclosing their age, gender and educational background.
 
-Tables 1-3 provides the basic profile of the participants;
+Tables 4-6 provides the basic profile of the participants;
 
 \begin{center}
 \begin{table}[htbp]
@@ -249,7 +255,7 @@ We measured the participant adequacy while collecting data and stopped data coll
 
 \subsection {Data Analysis}
 
-To transform the likert scale input into a measurement of the feeling of discomfort of the participants, we assigned values from 1 to 5 for the answers we received on the Likert scale as given in Table 04.
+To transform the likert scale input into a measurement of the feeling of discomfort of the participants, we assigned values from 1 to 5 for the answers we received on the Likert scale as given in Table 7.
 
 \begin{center}
 \begin{table}[htbp]
@@ -276,15 +282,16 @@ Very Uncomfortable & 5 \\
 
 Through this we obtained $F_d$ $\in$ \{1,2,3,4,5\} of users for the 30 scenarios (ten data items in three application contexts) that represent the user's feeling of discomfort in disclosing data.
 
-\subsection {Calculation of $P_{(i,j)}$}
+\subsubsection{Calculation of \textbf{$P_{(i,j)}$}}
 
 Next, in order to see how our calculated privacy risk $P_{(i,j)}$ approximate the perceived privacy risk $F_d$, we need to obtain the calculated values for $P_{(i,j)}$ using our model for the ten data items in the three different application contexts. As our goal is to introduce a metric for software developers to evaluate the perceived privacy risk of users, we calculated $P_{(i,j)}$ through a focus group with 4 participants with a software development experience. We believe this approach would closely represent the context in which software developers would discuss and evaluate the sensitivity, visibility and the relatedness of the data elements they use in software systems, at design stage. 
 
 In the focus group we first discussed the data items as individual elements and categorize them according to the sensitivity of the data item. For this we provided the participants with the three categorical definitions we defined in table I. Next, for all three application scenarios, we asked them to categorize the ten data items according to their relatedness to the application context and provided them with table III. As visibility was pre-determined when we defined the three application scenarios in the survey and communicated to users in the user study we did not evaluate it here. During the focus group, we also evaluated our model for data categorization presented in  Table I, II and III. We encouraged the participants to argue and raise any concerns they had on the three categories we defined and their appropriateness in categorizing the data. We discuss the concerns raised by the participants in the focus group when we discuss our findings. 
 
 After obtaining the S,V,R combinations for the 30 scenarios, we tested our model against the perceived privacy risk of our survey participants to observe the goodness of fit. In the results section we present the different calculated privacy risk ($P_{(i,j)}$) values we obtained and the corresponding perceived privacy risk ($F_d$) values we compared.
+\subsubsection{Qualitative Analysis}
 
-Finally, we used qualitative methods to analyse the answers to the open ended question using two independent coders. We followed the grounded theory approach where the coders coded data by eliciting codes from the data available without any prejudice \cite {wong2017eliciting}. This was done in NVivo \cite {saldana2015coding}. Coders reached code saturation at 49 and 103 respectively. The two coders came up with 6 common codes and 7 and 20 codes present in either of the coders at the end. Then both coders iteratively evaluated their codes and merged similar codes together to come up with 11 final codes that explain the difference in perceived privacy risks in the participants in the 30 different data disclosure scenarios we tested.
+Finally, we used qualitative methods to analyse the answers to the open ended question using two independent coders. We followed the grounded theory approach where the coders coded data by eliciting codes from the data available without any prejudice \cite {wong2017eliciting}. This was done in NVivo \cite {saldana2015coding}. Coders reached code saturation at 49 and 103 respectively. The two coders came up with 6 common codes and 7 and 20 codes present in either of the coders at the end. This was because one coder had very granular level codes while the other code had coded data at a higher level. For example, one coder had a code saying \textit {concerns on controlling data visibility}, while the other coder had three separate codes for the same content as \textit {controlling who can see my data}, \textit {application providing tools to hide data from public} and \textit {controlling data in the app}. Then both coders iteratively evaluated their codes and merged similar codes together to come up with 11 final codes that explain the differences in perceived privacy risks in the participants in the 30 different data disclosure scenarios we tested.
 
 \section {Results}
 
@@ -313,11 +320,9 @@ Following charts (image 1-4) shows the averages of the disclosure feeling of the
 \end{center}
 \end{figure}
 
-The variations in the discomfort in data disclosure is discussed in detail when we discuss our results in the next section.
+Then we attempted to fit our model on the raw data available (151 users and 30 instances, altogether 4530 instances). However, due to the relatively high variation of data, it was not possible to fit a model to this data set. That is, the same combination of S,V, R values had multiple perceived privacy risks varying from 1 to 5. This is expected because users have very different perceived privacy risks. Therefore, we then averaged the perceived privacy risk of all 151 users to obtain 30 distinct mean perceived privacy risk values for the 30 scenarios tested. Then we used these values to observe the goodness of fit of our proposed model in Matlab. 
 
-Then we attempted to fit our model on the raw data available (151 users and 30 instances, altogether 4530 instances). However, due to the relatively high variation of data, it was not possible to fit a model to this data set. That is the same combination of S,V, R values had multiple perceived privacy risks varying from 1 to 5. This is expected because users have very different perceived privacy risks. Therefore, we then averaged the perceived privacy risk of all 151 users to obtain 30 distinct mean perceived privacy risk values for the 30 scenarios tested. Then we used these values to observe the goodness of fit of our proposed model in Matlab. 
-
-Table IV shows the results when we tested different models for calculated privacy risk $P_{(i,j)}$ against the perceived privacy risk $F_d$. 
+Table 8 shows the results when we tested different models for calculated privacy risk $P_{(i,j)}$ against the perceived privacy risk $F_d$. 
 
 \begin{center}
 \begin{table}[htbp]
@@ -336,7 +341,7 @@ $\frac{S_{i}^1 \times V_{(i,j)}^1}{R_{(i,j)}^1}$  & 0.24 & SSE : 67.8  $R^2$ = 0
 \end{table}
 \end{center} 
 
-As seen in the table, that when we give the same power to all three parameters in the relationship the error is relatively high with a low R-square value. Therefore, we tried all 27 combinations of the powers 1,2 and 3 for S,V,R combinations without the combinations where all parameters got the same power. That is we ignored the combinations (1,1,1), (2,2,2) and (3,3,3).
+As seen in the table, that when we give the same power to all three parameters in the relationship the error is relatively high with a low R-square value. Therefore, we tried all 27 combinations of the powers 1,2 and 3 for S,V,R combinations (Table 9) without the combinations where all parameters got the same power. That is we ignored the combinations (1,1,1), (2,2,2) and (3,3,3). 
 \begin{center}
 \begin{table}[htbp]
 \caption{Model Fitting}
@@ -400,7 +405,7 @@ $a(  \frac{S_{i}^3 \times V_{(i,j)}^3}{R_{(i,j)}^2})$ & 0.003 & SSE: 13.12  $R^2
 \end{table}
 \end{center} 
 
-From the above result we can see that the goodness of fit increases with the increase in of the power of visibility and decreases when the power of sensitivity and relatedness increases. Therefore, we then gradually increased the power of visibility and tested the goodness of fit while keeping the power of sensitivity and relatedness at 1. Following table shows the values we received.
+From the above result we can see that the goodness of fit increases with the increase in of the power of visibility and decreases when the power of sensitivity and relatedness increases. Therefore, we then gradually increased the power of visibility and tested the goodness of fit while keeping the power of sensitivity and relatedness at 1. Table 10 shows the values we received.
 \begin{center}
 \begin{table}[htbp]
 \caption{Model Fitting - increasing the power of visibility}
@@ -428,13 +433,12 @@ $a(  \frac{S_{i}^1 \times V_{(i,j)}^9}{R_{(i,j)}^1})$ & 4.378e-05  & SSE : 7.706
 \end{table}
 \end{center}
 
-We can see that the error increases again the power of visibility increases beyond 6. Therefore, the optimal relationship with the best goodness of fit is,
-
+We can see that the error increases again the power of visibility increases beyond 7. Therefore, the optimal relationship with the best goodness of fit is in the model where visibility is raised to the power of 7 with a coefficient of 0.01. This had a SSE of ~7.6 and an $R^2$ of 71.5\%. However the increase of $R^2$ from the model with visibility to the power three to visibility to the power 7 is only almost 1\%. Therefore, one could safely assume the model,
 \[
-\frac{S_{i}^1 \times V_{(i,j)}^6}{R_{(i,j)}^1}
+\frac{0.03 \times  S_{i} \times V_{(i,j)}^3}{R_{(i,j)}}
 \]
 
-From this result it can be seen that the visibility has the largest effect on the perceived privacy risk of users. 
+gives a good enough approximation of the perceived privacy risk of users for a data item \textit {i} in a software application \textit {j}. From the results, it is apparent that the visibility has the largest effect on the perceived privacy risk of users. 
 
 In order to further observe why users felt differently when they disclosed data in the three scenarios we described, in the next section we present the qualitative analysis of the reasons users gave.
 
@@ -489,16 +493,18 @@ Consequently, we identified that users are concerned about the trust towards the
 
 \section {Discussion}
 
-The model we tested in this research was derived based on the theoretical knowledge presented by Maximilien et al. \cite {maximilien2009privacy}. However, their model suggest that both sensitivity and visibility of content has the same effect on the privacy risk of the content. At the same time their model did not account for the relatedness of the content. In our model we introduced a term for relatedness of the content and through the user study we were able to identify that the content visibility had more impact on the privacy risk of the content than data sensitivity and relatedness. Therefore, when measuring privacy risk of content in similar environments using either   the original relationship by Maximilien et al. \cite {maximilien2009privacy} we suggest that content visibility should be taken at a higher power to closely approximate the perceived privacy risk of users. 
+The model we tested in this research was derived based on the theoretical knowledge presented by Maximilien et al. \cite {maximilien2009privacy}. They propose that privacy could be measured by sensitivity and visibility where their combination is any arbitrary expression that results in a monotonically incremental result for privacy risk. However, their model has been applied on the assumption that both sensitivity and visibility of content has the same effect on the privacy risk of the content \cite{minkus2014scale}. At the same time their model did not account for the relatedness of the content. In our model we introduced a term for relatedness of the content and through the user study we were able to identify that the content visibility had more impact on the privacy risk of the content than data sensitivity and relatedness. Therefore, when measuring privacy risk of content in similar environments using either   the original relationship by Maximilien et al. \cite {maximilien2009privacy} we suggest that content visibility should be taken at a higher power to closely approximate the perceived privacy risk of users. 
 
-Consequently, the model we derived here does not account for the human attributes of users that affect their perceived privacy risk when interacting with software systems. Previous research has shown that the personality of users could affect the expected privacy of users in a given scenario, which impact the perceived privacy risk of users when they interact with software systems. For example, Westin's privacy personality scale identify three categories of users with different levels of privacy expectations \cite {westin1991equifax}. They have shown that users could be divided into privacy fundamentalists, who are extremely concerned about their privacy, privacy pragmatists, who understand that privacy needs to be compromised according to situations and privacy unconcerned, who are either little not concerned about their privacy. These personalities of users could affect the perceived privacy risk of users. For example, in our survey P41 said \textit{Basically I feel comfortable giving information on a need to know basis only} and P114 said \textit {nothing} implying he did not feel different disclosing data into different application settings. Consequently, there could exist other attributes such as previous experience of users, their age and the nature of work they do that may affect their perceived privacy risk. For example, P5 said \textit{With the experiences when surfing in the internet made me to answer above questions so} and P89 said \textit {I was in couple of these situations which gave me an idea to answer these questions easily}. However, in this research our focus was to model the perceived privacy risk eliminating the personality traits of a person. Therefore, by design we did not capture the privacy profile of our participants. The model we tested had an SSE value of 7.682 and an $R_{2}$ value of ~71\%. This could be taken as an acceptable goodness of fit in a human study. While the variations in the model could probably be explained by human factors, for the purpose of deriving a model for software developers to approximate the perceived privacy risk of the data used in software systems, we believe our model is appropriate.
+Consequently, the model we derived here does not account for the human attributes of users that affect their perceived privacy risk when interacting with software systems. Previous research has shown that the personality of users could affect the expected privacy of users in a given scenario, which impact the perceived privacy risk of users when they interact with software systems. For example, Westin's privacy personality scale identify three categories of users with different levels of privacy expectations \cite {westin1991equifax}. They have shown that users could be divided into privacy fundamentalists, who are extremely concerned about their privacy, privacy pragmatists, who understand that privacy needs to be compromised according to situations and privacy unconcerned, who are either little not concerned about their privacy \cite {westin1991equifax}. These personalities of users could affect the perceived privacy risk of users. 
 
-As future work, we aim to run our study with privacy profiling of participants in order to observe how our model could cater for the privacy requirements of users with different privacy personalities. 
+For example, in our survey P41 said \textit{Basically I feel comfortable giving information on a need to know basis only} and P114 said \textit {nothing} implying he did not feel different disclosing data into different application settings. This could be explained by the theory of psychometry, which explains  why people's perception of external factors such as privacy is dependent on their psychological differences \cite {malhotra2004internet, egelman2015predicting}. There is a lot of work done in this area where privacy psychometry is scaled and defined. For example IUIPC is one such scale that defines how people differ in their privacy attitudes \cite {malhotra2004internet}. Consequently, there could exist other attributes such as previous experience of users, their age and the nature of work they do that may affect their perceived privacy risk. For example, P5 said \textit{With the experiences when surfing in the internet made me to answer above questions so} and P89 said \textit {I was in couple of these situations which gave me an idea to answer these questions easily}. However, in this research our focus was to model the perceived privacy risk eliminating the personality traits of a person. Therefore, by design we did not capture the privacy profile of our participants. The model we tested had an SSE value of 7.682 and an $R_{2}$ value of ~71\%. This could be taken as an acceptable goodness of fit in a human study. While the variations in the model could probably be explained by human factors, for the purpose of deriving a model for software developers to approximate the perceived privacy risk of the data used in software systems, we believe our model is appropriate.
+
+As future work, we aim to improve our study with privacy profiling of participants incorporating the models that capture psychometric measurements \cite {malhotra2004internet, egelman2015predicting, westin1991equifax}, in order to observe how our model could cater for the privacy requirements of users with different privacy personalities. 
 
 
 
 \section{Conclusion and Future Work}
-In this research we derived and proposed a model to calculate the perceived privacy risk of users when they disclose data into software systems. We used the sensitivity of data, the visibility data gets in a system design and the relatedness of data to the system as the independent variables in the model. We then tested our model against actual perceived privacy risk of users in three different application settings. 
+In this research we derived and proposed a model to calculate the perceived privacy risk of users when they disclose data into software systems. We used the sensitivity of data, the visibility data gets in a system design and the relatedness of data to the system as the independent variables in the model and proposed the model based on existing theoretical knowledge. We then tested our model against actual perceived privacy risk of users in three different application settings. Our results indicate that both sensitivity and visibility of content must be in a monotonically increasing combination to represent privacy where visibility of content is given a higher power. At the same time relatedness of the content should be in a combination with sensitivity and visibility such that privacy risk monotonically decrease with the relatedness. We believe that this knowledge could be used by software developers (those who are involved in developing, designing and defining software systems) to measure the perceived privacy risk of the data they use in the systems they design. With this knowledge, they could implement better security for data with higher perceived privacy risk and communicate the system functionalities to users in order to reduce the perceived privacy risk of users. 
 
 % Fonts specification --- not shown as it doesn't exist in the Word document either. 
 
